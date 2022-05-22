@@ -1,9 +1,17 @@
 .container{
     display: flex;
+
 }
 
 .sidebar{
     flex: 0 0 25.2rem;
     display: flex;
     flex-direction: column;
+}
+
+.main-content{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: orange
 }
