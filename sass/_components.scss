@@ -235,6 +235,7 @@
       padding: 1.2rem;
       border-radius: 7px;
       transition: all .4s;
+      border: var(--border);
 
       &:hover{
           background-color: var(--color-primary);
@@ -257,6 +258,7 @@
         padding: 1.2rem;
         border-radius: 7px;
         transition: all .4s;
+        border: var(--border);
   
         &:hover{
             background-color: var(--color-primary);
@@ -279,6 +281,7 @@
         padding: 1.2rem;
         border-radius: 7px;
         transition: all .4s;
+        border: var(--border);
   
         &:hover{
             background-color: var(--color-primary);
@@ -339,4 +342,18 @@
         }
     }
   }
+}
+
+// Dashboard aside /////////
+.trade{
+
+    &__coin{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2.4rem 0;
+
+        h3{
+            font-size: 16px;
+        }
+    }
 }

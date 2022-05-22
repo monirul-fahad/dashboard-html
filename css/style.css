@@ -188,7 +188,8 @@ a {
       background-color: #fff;
       padding: 1.2rem;
       border-radius: 7px;
-      transition: all .4s; }
+      transition: all .4s;
+      border: var(--border); }
       .dashboard__counter--1:hover {
         background-color: var(--color-primary);
         color: #fff; }
@@ -203,7 +204,8 @@ a {
       background-color: #fff;
       padding: 1.2rem;
       border-radius: 7px;
-      transition: all .4s; }
+      transition: all .4s;
+      border: var(--border); }
       .dashboard__counter--2:hover {
         background-color: var(--color-primary);
         color: #fff; }
@@ -218,7 +220,8 @@ a {
       background-color: #fff;
       padding: 1.2rem;
       border-radius: 7px;
-      transition: all .4s; }
+      transition: all .4s;
+      border: var(--border); }
       .dashboard__counter--3:hover {
         background-color: var(--color-primary);
         color: #fff; }
@@ -253,6 +256,13 @@ a {
       .dashboard__counter-top img {
         width: 4rem;
         height: 4rem; }
+
+.trade__coin {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2.4rem 0; }
+  .trade__coin h3 {
+    font-size: 16px; }
 
 .container {
   display: flex; }
