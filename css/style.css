@@ -1,0 +1,99 @@
+:root {
+  --color-primary: #2752E7;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-secondary: rgba(169, 169, 169, 1);
+  --color-tertiary: rgba(245, 248, 254, 1);
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --line: 1px solid var(--color-grey-light-2);
+  --border: 1px solid #f0eeee; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+  min-height: 100vh;
+  max-width: 120rem;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  background-color: #F9FAFF; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+.sidebar__logo {
+  padding: 2.7rem 0;
+  text-align: center;
+  border-bottom: var(--border); }
+  .sidebar__logo img {
+    width: 13rem;
+    height: 3.2rem; }
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 2.4rem;
+  padding: 0 3rem 3rem 3rem; }
+  .side-nav__item {
+    position: relative;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 1.6rem; }
+  .side-nav__item:hover, .side-nav__item--active {
+    background-color: var(--color-tertiary); }
+    .side-nav__item:hover .side-nav__link, .side-nav__item--active .side-nav__link {
+      color: var(--color-primary); }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+    border-top-left-radius: 2px; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1); }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-secondary);
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10; }
+    .side-nav__link:link span:not(:last-child), .side-nav__link:visited span:not(:last-child) {
+      margin-right: 1.2rem; }
+
+.container {
+  display: flex; }
+
+.sidebar {
+  flex: 0 0 25.2rem;
+  display: flex;
+  flex-direction: column; }
