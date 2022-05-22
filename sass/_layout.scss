@@ -22,6 +22,12 @@
 
 .dashboard{
     padding: 2.4rem;
-    background-color: var(--color-tertiary)
+    background-color: var(--color-tertiary);
+
+    &__aside{
+     background-color: #fff
+    }
 }
+
+
 

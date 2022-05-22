@@ -178,8 +178,7 @@ a {
   .dashboard__aside {
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0;
-    background-color: orange; }
+    flex-basis: 0; }
   .dashboard__counter {
     display: flex;
     gap: 2rem; }
@@ -264,6 +263,15 @@ a {
   .trade__coin h3 {
     font-size: 16px; }
 
+.trade__price {
+  text-align: center; }
+  .trade__price p {
+    color: var(--color-secondary); }
+  .trade__price h3 {
+    font-size: 1.8rem;
+    margin-top: .4rem;
+    font-weight: 700; }
+
 .container {
   display: flex; }
 
@@ -283,3 +291,5 @@ a {
 .dashboard {
   padding: 2.4rem;
   background-color: var(--color-tertiary); }
+  .dashboard__aside {
+    background-color: #fff; }

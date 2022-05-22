@@ -221,7 +221,6 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
-    background-color: orange;
   }
 
 //   COUNTER /////////
@@ -354,6 +353,19 @@
 
         h3{
             font-size: 16px;
+        }
+    }
+
+    &__price{
+        text-align: center;
+
+        p{
+            color: var(--color-secondary)
+        }
+        h3{
+            font-size: 1.8rem;
+            margin-top: .4rem;
+            font-weight: 700;
         }
     }
 }
