@@ -315,7 +315,8 @@ a {
 .trade {
   margin-bottom: 2.4rem;
   background-color: #fff;
-  border: var(--border); }
+  border: var(--border);
+  border-radius: .7rem; }
   .trade__coin {
     display: flex;
     justify-content: space-evenly;
@@ -355,7 +356,8 @@ a {
 .transfer {
   margin-bottom: 2.4rem;
   background-color: #fff;
-  border: var(--border); }
+  border: var(--border);
+  border-radius: .7rem; }
   .transfer h3 {
     font-size: 1.6rem;
     margin: 1.6rem 2rem; }
