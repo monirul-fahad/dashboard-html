@@ -67,7 +67,65 @@ a{
     background-color: var(--color-primary);;
     color: #fff;
     cursor: pointer;
-}
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+
+
+      
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.2);
+      
+          &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+        }
+      
+        &:active , 
+        &:focus {
+          outline:none;
+          transform: translateY(-1px);
+          box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
+        }
+      
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          border-radius: .4rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: all 0.4s;
+        }
+      
+        &--white {
+          background-color: var(--color-white);
+          color: --color-secondary;
+      
+          &::after {
+            background-color: var(--color-white);
+          }
+        }
+      
+        &--blue {
+          background-color: var(--color-primary);
+          color:var(--color-white);
+      
+          &::after {
+            background-color: var(--color-primary);
+          }
+        }
+      
+        &--animated {
+          animation: moveInBottom 0.5s ease-out 0.75s;
+          animation-fill-mode: backwards;
+        }
+      }
 
 .font-color{
     color: #53d258 !important;
