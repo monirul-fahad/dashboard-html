@@ -133,8 +133,8 @@
                 </div>
                 <img src="./images/vector-2.png" alt="">
               </div>
-              <h2>$40,0000.063</h2>
-              <p><span class="material-icons-outlined"> trending_down</span>  +35.54%</p>
+              <h2>$84,00.063</h2>
+              <p><span class="material-icons-outlined"> trending_down</span>  +10.54%</p>
             </div>
             <div class="dashboard__counter--3">
               <div class="dashboard__counter-top">
@@ -144,14 +144,16 @@
                 </div>
                 <img src="./images/vector-1.png" alt="">
               </div>
-              <h2>$40,0000.063</h2>
-              <p><span class="material-icons-outlined"> trending_up </span> +35.54%</p>
+              <h2>$103,000</h2>
+              <p><span class="material-icons-outlined"> trending_up </span> +10.54%</p>
             </div>
           </div>
         </section>
 
         <!-- Dashboard aside  -->
         <section class="dashboard__aside">
+
+          <!-- buy & sell coins -->
           <div class="trade">
             <div class="trade__coin">
               <h3>Buy</h3>
@@ -161,29 +163,40 @@
               <p>Ethereum Price</p>
               <h3>$3.110,31</h3>
             </div>
-            <div>
-             <input type="number" name="" id="">
-             <div>
+            <div class="trade-input">
+             <input type="number" value="0.18758" name="" id="">
+             <div  class="trade-input__right">
                <img src="./images/btc.png" alt="">
                <p>BTC</p>
-               <span class="material-symbols-outlined">
-                keyboard_arrow_down
-                </span>
+               <span class="material-icons-outlined"> keyboard_arrow_down </span>
              </div>
             </div>
-            <div>
-              <input type="number" name="" id="">
-              <div>
+            <div  class="trade-input">
+              <input type="number"  value="0.18758" name="" id="">
+              <div class="trade-input__right">
                 <img src="./images/eth.png" alt="">
                 <p>ETH</p>
-                <span class="material-symbols-outlined">
-                 keyboard_arrow_down
-                 </span>
+                <span class="material-icons-outlined"> keyboard_arrow_down </span>
               </div>
             </div>
+            <button class="button">Buy ETH</button>
           </div>
-          <div class="transfer">
 
+          <!-- quick transfer  -->
+          <div class="transfer">
+<h3>Quick Transfer</h3>
+<div class="transfer__profile">
+  <img src="./images/user-1.jpg" alt="user">
+  <img src="./images/user-3.jpg" alt="user">
+  <img src="./images/user-4.jpg" alt="user">
+  <img src="./images/user-5.jpg" alt="user">
+  <span class="material-icons-outlined"> add </span>
+</div>
+<label for="payment">Amount</label><br>
+<input type="text"  value="$1,500">
+<button class="button">Transfer <span class="material-icons-outlined">
+  arrow_right_alt
+  </span></button>
           </div>
 
         </section>

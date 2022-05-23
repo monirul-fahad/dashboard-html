@@ -223,7 +223,7 @@
     flex-basis: 0;
   }
 
-//   COUNTER /////////
+  //   COUNTER /////////
   &__counter {
     display: flex;
     gap: 2rem;
@@ -233,139 +233,219 @@
       background-color: #fff;
       padding: 1.2rem;
       border-radius: 7px;
-      transition: all .4s;
+      transition: all 0.4s;
       border: var(--border);
 
-      &:hover{
-          background-color: var(--color-primary);
-          color: #fff;
+      &:hover {
+        background-color: var(--color-primary);
+        color: #fff;
       }
 
-      h2{
-          font-size: 1.8rem;
+      h2 {
+        font-size: 1.8rem;
       }
 
-      p{
-          display: flex;
-          color: rgba(83, 210, 88, 1) !important;
-          font-size:1.2rem;
+      p {
+        display: flex;
+        color: rgba(83, 210, 88, 1) !important;
+        font-size: 1.2rem;
       }
     }
     &--2 {
-        flex: 1;
-        background-color: #fff;
-        padding: 1.2rem;
-        border-radius: 7px;
-        transition: all .4s;
-        border: var(--border);
-  
-        &:hover{
-            background-color: var(--color-primary);
-            color: #fff;
-        }
-  
-        h2{
-            font-size: 1.8rem;
-        }
-  
-        p{
-            display: flex;
-            color: rgba(226, 92, 92, 1) !important;
-            font-size:1.2rem;
-        }
+      flex: 1;
+      background-color: #fff;
+      padding: 1.2rem;
+      border-radius: 7px;
+      transition: all 0.4s;
+      border: var(--border);
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        display: flex;
+        color: rgba(226, 92, 92, 1) !important;
+        font-size: 1.2rem;
+      }
     }
     &--3 {
-        flex: 1;
-        background-color: #fff;
-        padding: 1.2rem;
-        border-radius: 7px;
-        transition: all .4s;
-        border: var(--border);
-  
-        &:hover{
-            background-color: var(--color-primary);
-            color: #fff;
-        }
-  
-        h2{
-            font-size: 1.8rem;
-        }
-  
-        p{
-            display: flex;
-            color: rgba(83, 210, 88, 1) !important;
-            font-size:1.2rem;
-        }
+      flex: 1;
+      background-color: #fff;
+      padding: 1.2rem;
+      border-radius: 7px;
+      transition: all 0.4s;
+      border: var(--border);
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        display: flex;
+        color: rgba(83, 210, 88, 1) !important;
+        font-size: 1.2rem;
+      }
     }
 
-     &--1:hover &-top--icon{
-         span{
-             background-color: #fff;
-         }
-     }
-     &--2:hover &-top--icon{
-         span{
-             background-color: #fff;
-         }
-     }
-     &--3:hover &-top--icon{
-         span{
-             background-color: #fff;
-         }
-     }
+    &--1:hover &-top--icon {
+      span {
+        background-color: #fff;
+      }
+    }
+    &--2:hover &-top--icon {
+      span {
+        background-color: #fff;
+      }
+    }
+    &--3:hover &-top--icon {
+      span {
+        background-color: #fff;
+      }
+    }
 
-    &-top{
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      &--icon {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-bottom: 2rem ;
+        gap: 1rem;
+        font-weight: 700;
 
-        &--icon{
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 700;
-
-            span{
-                font-size: 1.2rem;
-                padding: .8rem;
-                background: #D0DBFF;
-                border-radius:50%;
-                color: var(--color-primary) !important;
-            }
+        span {
+          font-size: 1.2rem;
+          padding: 0.8rem;
+          background: #d0dbff;
+          border-radius: 50%;
+          color: var(--color-primary) !important;
         }
+      }
 
-        img{
-            width: 4rem;
-            height: 4rem;
-        }
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 }
 
 // Dashboard aside /////////
-.trade{
+.trade {
+  margin-bottom: 2.4rem;
+  background-color: #fff;
+  border: var(--border);
 
-    &__coin{
+  &__coin {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2.4rem 0;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  &__price {
+    text-align: center;
+
+    p {
+      color: var(--color-secondary);
+    }
+    h3 {
+      font-size: 1.8rem;
+      margin-top: 0.4rem;
+      font-weight: 700;
+    }
+  }
+  &-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: var(--border);
+    margin: 2rem;
+    padding: 1rem;
+
+    input {
+      border: none;
+      outline: none;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+}
+
+.transfer {
+  margin-bottom: 2.4rem;
+  background-color: #fff;
+  border: var(--border);
+
+  h3{
+      font-size: 1.6rem;
+      margin: 1.6rem 2rem;
+  }
+
+  &__profile {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    margin-bottom: 1.2rem;
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+    }
+
+    span{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
         display: flex;
-        justify-content: space-evenly;
-        padding: 2.4rem 0;
-
-        h3{
-            font-size: 16px;
-        }
+        align-items: center;
+        justify-self: center;
     }
+  }
 
-    &__price{
-        text-align: center;
+  label{
+    margin-left: 2rem;
+    color: var(--color-secondary)
+}
 
-        p{
-            color: var(--color-secondary)
-        }
-        h3{
-            font-size: 1.8rem;
-            margin-top: .4rem;
-            font-weight: 700;
-        }
-    }
+input{
+    // padding: 1.1rem;
+    margin: 0 2rem;
+    width: -webkit-fill-available;
+    border: var(--border);
+    outline: none;
+}
+button{
+    display: flex;
+    align-items: center;
+}
 }
