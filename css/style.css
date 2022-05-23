@@ -5,9 +5,6 @@
   --color-secondary: rgba(169, 169, 169, 1);
   --color-secondary-2: rgba(98, 98, 98, 1);
   --color-tertiary: rgba(245, 248, 254, 1);
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
-  --line: 1px solid var(--color-grey-light-2);
   --border: 1px solid #f0eeee; }
 
 * {
@@ -33,7 +30,7 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   font-size: 1.4rem;
-  background-color: #F9FAFF; }
+  background-color: var(--color-tertiary); }
 
 li {
   list-style-type: none; }
@@ -52,6 +49,9 @@ a {
   background-color: var(--color-primary);
   color: #fff;
   cursor: pointer; }
+
+.font-color {
+  color: #53d258 !important; }
 
 .sidebar {
   border-right: var(--border); }
@@ -170,7 +170,8 @@ a {
       padding: 0.5rem 1rem;
       color: var(--color-secondary); }
       .header__right--search-input span {
-        font-size: 2rem; }
+        font-size: 2rem;
+        cursor: pointer; }
       .header__right--search-input input {
         border: none;
         outline: none;
@@ -183,6 +184,9 @@ a {
 .dashboard {
   display: flex;
   gap: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard {
+      flex-direction: column; } }
   .dashboard__chartside {
     flex-grow: 2;
     flex-shrink: 1;
@@ -194,6 +198,9 @@ a {
   .dashboard__counter {
     display: flex;
     gap: 2rem; }
+    @media only screen and (max-width: 31.25em) {
+      .dashboard__counter {
+        flex-direction: column; } }
     .dashboard__counter--1 {
       flex: 1;
       background-color: #fff;
@@ -278,6 +285,10 @@ a {
     padding: 2.4rem 0; }
     .trade__coin h3 {
       font-size: 16px; }
+    .trade__coin h3:first-child {
+      color: var(--color-primary); }
+    .trade__coin h3:last-child {
+      color: var(--color-secondary); }
   .trade__price {
     text-align: center; }
     .trade__price p {
@@ -313,7 +324,7 @@ a {
     margin: 1.6rem 2rem; }
   .transfer__profile {
     display: flex;
-    gap: 1.8rem;
+    gap: 1rem;
     align-items: center;
     justify-content: flex-start;
     margin-left: 2rem;
@@ -321,7 +332,8 @@ a {
     .transfer__profile img {
       width: 4rem;
       height: 4rem;
-      border-radius: 50%; }
+      border-radius: 50%;
+      cursor: pointer; }
     .transfer__profile span {
       width: 4rem;
       height: 4rem;
@@ -330,7 +342,8 @@ a {
       color: #fff;
       display: flex;
       align-items: center;
-      justify-self: center; }
+      justify-content: center;
+      cursor: pointer; }
   .transfer label {
     margin-left: 2rem;
     color: var(--color-secondary); }
@@ -338,10 +351,101 @@ a {
     margin: 0 2rem;
     width: -webkit-fill-available;
     border: var(--border);
-    outline: none; }
+    outline: none;
+    padding-left: 1.4rem; }
   .transfer button {
     display: flex;
-    align-items: center; }
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.4rem; }
+
+.dashboard__chart--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; }
+  .dashboard__chart--header-btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem; }
+  .dashboard__chart--header-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: var(--border);
+    outline: none;
+    color: var(--color-secondary-2);
+    padding: 0 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s; }
+    .dashboard__chart--header-btn:hover {
+      background-color: var(--color-primary);
+      color: #fff; }
+    .dashboard__chart--header-btn:focus {
+      transform: translateY(-2px); }
+
+.new-coin {
+  margin-bottom: 2.4rem;
+  background-color: #fff;
+  border: var(--border);
+  padding-bottom: 2.5rem;
+  border-radius: 0.7rem; }
+  .new-coin__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.6rem 2rem 0 2rem; }
+    .new-coin__item:first-child p {
+      color: var(--color-primary);
+      font-weight: 700;
+      cursor: pointer; }
+    .new-coin__item:hover .new-coin__item--left h3 {
+      color: var(--color-primary);
+      cursor: pointer; }
+  .new-coin__item--left {
+    display: flex;
+    align-items: center;
+    gap: 1rem; }
+    .new-coin__item--left img {
+      width: 4rem;
+      height: 4rem; }
+    .new-coin__item--left h3 {
+      font-size: 1.4rem; }
+    .new-coin__item--left p {
+      font-size: 1rem;
+      color: var(--color-secondary); }
+
+.trending-market {
+  margin-top: 2.4rem;
+  padding: 2rem;
+  background-color: #fff; }
+  .trending-market__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem; }
+    .trending-market__item:not(:last-child) {
+      padding-bottom: 2rem;
+      padding-top: 1rem; }
+    .trending-market__item p {
+      display: flex;
+      align-items: center; }
+    .trending-market__item--img {
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+      .trending-market__item--img img {
+        width: 2.4rem;
+        height: 2.4rem; }
+  .trending-market__sub {
+    border-bottom: var(--border);
+    padding-bottom: 0 !important; }
+    .trending-market__sub p {
+      font-size: 1rem;
+      color: var(--color-secondary); }
+  .trending-market__heading {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important; }
 
 .container {
   display: flex; }
@@ -349,7 +453,12 @@ a {
 .sidebar {
   flex: 0 0 25.2rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-color: #fff;
+  height: 90vh; }
+  @media only screen and (max-width: 47.5em) {
+    .sidebar {
+      display: none; } }
 
 .main-content {
   flex: 1; }
@@ -357,8 +466,14 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background-color: #fff; }
 
 .dashboard {
-  padding: 2.4rem;
-  background-color: var(--color-tertiary); }
+  padding: 2.4rem; }
+  .dashboard__chart {
+    margin: 2.4rem 0;
+    background-color: #fff;
+    border: var(--border);
+    padding: 2rem;
+    border-radius: 7px; }

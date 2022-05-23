@@ -117,24 +117,34 @@
             <div class="dashboard__counter--1">
               <div class="dashboard__counter-top">
                 <div class="dashboard__counter-top--icon">
-                  <span class="material-icons-outlined"> account_balance_wallet </span>
+                  <span class="material-icons-outlined">
+                    account_balance_wallet
+                  </span>
                   Balance
                 </div>
-                <img src="./images/vector-1.png" alt="">
+                <img src="./images/vector-1.png" alt="" />
               </div>
               <h2>$40,0000.063</h2>
-              <p><span class="material-icons-outlined"> trending_up </span> +35.54%</p>
+              <p>
+                <span class="material-icons-outlined"> trending_up </span>
+                +35.54%
+              </p>
             </div>
             <div class="dashboard__counter--2">
               <div class="dashboard__counter-top">
                 <div class="dashboard__counter-top--icon">
-                  <span class="material-icons-outlined"> account_balance_wallet </span>
-                  Balance
+                  <span class="material-icons-outlined">
+                    account_balance_wallet
+                  </span>
+                  Spending
                 </div>
-                <img src="./images/vector-2.png" alt="">
+                <img src="./images/vector-2.png" alt="" />
               </div>
               <h2>$84,00.063</h2>
-              <p><span class="material-icons-outlined"> trending_down</span>  +10.54%</p>
+              <p>
+                <span class="material-icons-outlined"> trending_down</span>
+                +10.54%
+              </p>
             </div>
             <div class="dashboard__counter--3">
               <div class="dashboard__counter-top">
@@ -142,17 +152,117 @@
                   <span class="material-icons-outlined"> savings </span>
                   Balance
                 </div>
-                <img src="./images/vector-1.png" alt="">
+                <img src="./images/vector-1.png" alt="" />
               </div>
               <h2>$103,000</h2>
-              <p><span class="material-icons-outlined"> trending_up </span> +10.54%</p>
+              <p>
+                <span class="material-icons-outlined"> trending_up </span>
+                +10.54%
+              </p>
             </div>
           </div>
+
+          <!-- Dashboard Chart  -->
+         <div  class="dashboard__chart">
+           <div class="dashboard__chart--header">
+             <h2>Statistic</h2>
+             <div class="dashboard__chart--header-btns">
+               <button class="dashboard__chart--header-btn">Spending <span class="material-icons-outlined">
+                expand_more
+                </span></button>
+               <button class="dashboard__chart--header-btn">20222 <span class="material-icons-outlined">
+                expand_more
+                </span> </button>
+             </div>
+           </div>
+          <div>
+            <canvas id="chart_area" height="195"></canvas>
+          </div>
+         </div>
+
+         <!-- Trending Market  -->
+         <div class="trending-market">
+           <div class="trending-market__item trending-market__heading">
+            <h2> Trending Market</h2>
+            <P>View more markets</P>
+           </div>
+           <div class="trending-market__item trending-market__sub">
+             <p>Token</p>
+             <p>Symbol</p>
+             <p>Last Price</p>
+             <p>24H Change</p>
+             <p>Market cap</p>
+           </div>
+           <div class="trending-market__item">
+             <div class="trending-market__item--img">
+               <img src="./images/bnb.png" alt="">
+               <h4>BNB</h4>
+             </div>
+             <p>BNB</p>
+             <p>$42.263,00</p>
+             <p class="font-color">
+              <span class="material-icons-outlined"> trending_up </span>
+              +35.54%
+            </p>
+             <p>$784,394M</p>
+           </div>
+           <div class="trending-market__item">
+             <div class="trending-market__item--img">
+               <img src="./images/btc.png" alt="">
+               <h4>BNB</h4>
+             </div>
+             <p>BTC</p>
+             <p>$42.263,00</p>
+             <p  class="font-color">
+              <span class="material-icons-outlined"> trending_up </span>
+              +35.54%
+            </p>
+             <p>$784,394M</p>
+           </div>
+           <div class="trending-market__item">
+             <div class="trending-market__item--img">
+               <img src="./images/eth.png" alt="">
+               <h4>BNB</h4>
+             </div>
+             <p>ETH</p>
+             <p>$42.263,00</p>
+             <p class="font-color">
+              <span class="material-icons-outlined"> trending_up </span>
+              +35.54%
+            </p>
+             <p>$784,394M</p>
+           </div>
+           <div class="trending-market__item">
+             <div class="trending-market__item--img">
+               <img src="./images/luna@2x.png" alt="">
+               <h4>BNB</h4>
+             </div>
+             <p>LUN</p>
+             <p>$42.263,00</p>
+             <p class="font-color">
+              <span class="material-icons-outlined"> trending_up </span>
+              +35.54%
+            </p>
+             <p>$784,394M</p>
+           </div>
+           <div class="trending-market__item">
+             <div class="trending-market__item--img">
+               <img src="./images/ada.png" alt="">
+               <h4>BNB</h4>
+             </div>
+             <p>ADA</p>
+             <p>$42.263,00</p>
+             <p class="font-color">
+              <span class="material-icons-outlined"> trending_up </span>
+              +35.54%
+            </p>
+             <p>$784,394M</p>
+           </div>
+         </div>
         </section>
 
         <!-- Dashboard aside  -->
         <section class="dashboard__aside">
-
           <!-- buy & sell coins -->
           <div class="trade">
             <div class="trade__coin">
@@ -164,19 +274,23 @@
               <h3>$3.110,31</h3>
             </div>
             <div class="trade-input">
-             <input type="number" value="0.18758" name="" id="">
-             <div  class="trade-input__right">
-               <img src="./images/btc.png" alt="">
-               <p>BTC</p>
-               <span class="material-icons-outlined"> keyboard_arrow_down </span>
-             </div>
-            </div>
-            <div  class="trade-input">
-              <input type="number"  value="0.18758" name="" id="">
+              <input type="number" value="0.18758" name="" id="" />
               <div class="trade-input__right">
-                <img src="./images/eth.png" alt="">
+                <img src="./images/btc.png" alt="" />
+                <p>BTC</p>
+                <span class="material-icons-outlined">
+                  keyboard_arrow_down
+                </span>
+              </div>
+            </div>
+            <div class="trade-input">
+              <input type="number" value="0.18758" name="" id="" />
+              <div class="trade-input__right">
+                <img src="./images/eth.png" alt="" />
                 <p>ETH</p>
-                <span class="material-icons-outlined"> keyboard_arrow_down </span>
+                <span class="material-icons-outlined">
+                  keyboard_arrow_down
+                </span>
               </div>
             </div>
             <button class="button">Buy ETH</button>
@@ -184,23 +298,92 @@
 
           <!-- quick transfer  -->
           <div class="transfer">
-<h3>Quick Transfer</h3>
-<div class="transfer__profile">
-  <img src="./images/user-1.jpg" alt="user">
-  <img src="./images/user-3.jpg" alt="user">
-  <img src="./images/user-4.jpg" alt="user">
-  <img src="./images/user-5.jpg" alt="user">
-  <span class="material-icons-outlined"> add </span>
-</div>
-<label for="payment">Amount</label><br>
-<input type="text"  value="$1,500">
-<button class="button">Transfer <span class="material-icons-outlined">
-  arrow_right_alt
-  </span></button>
+            <h3>Quick Transfer</h3>
+            <div class="transfer__profile">
+              <img src="./images/user-1.jpg" alt="user" />
+              <img src="./images/user-3.jpg" alt="user" />
+              <img src="./images/user-4.jpg" alt="user" />
+              <img src="./images/user-5.jpg" alt="user" />
+              <span class="material-icons-outlined"> add </span>
+            </div>
+            <label for="payment">Amount</label><br />
+            <input type="text" value="$1,500" />
+            <button class="button">
+              Transfer
+              <span class="material-icons-outlined"> arrow_right_alt </span>
+            </button>
           </div>
+
+          <!--  New Coin  -->
+          <div class="new-coin">
+            <div class="new-coin__item">
+              <h3>New Cryptocurrency</h3>
+              <p>See all</p>
+            </div>
+            <div class="new-coin__item">
+              <div class="new-coin__item--left">
+                <img src="./images/coin-1.png" alt="">
+                <div>
+                  <h3>Litecoin</h3>
+                  <p>Added 2 days ago</p>
+                </div>
+              </div>
+              <span class="material-icons-outlined">
+                chevron_right
+                </span>
+            </div>
+
+            <div class="new-coin__item">
+              <div class="new-coin__item--left">
+                <img src="./images/coin-2.png" alt="">
+                <div>
+                  <h3>Ethereum Classic</h3>
+                  <p>Added 5 days ago</p>
+                </div>
+              </div>
+              <span class="material-icons-outlined">
+                chevron_right
+                </span>
+            </div>
+
+            <div class="new-coin__item">
+              <div class="new-coin__item--left">
+                <img src="./images/coin-3.png" alt="">
+                <div>
+                  <h3>H0dlcoin</h3>
+                  <p>Added 6 days ago</p>
+                </div>
+              </div>
+              <span class="material-icons-outlined">
+                chevron_right
+                </span>
+            </div>
+
+            <div class="new-coin__item">
+              <div class="new-coin__item--left">
+                <img src="./images/coin-4.png" alt="">
+                <div>
+                  <h3>GXchain</h3>
+                  <p>Added 7 days ago</p>
+                </div>
+              </div>
+              <span class="material-icons-outlined">
+                chevron_right
+                </span>
+            </div>
+          </div>
+
 
         </section>
       </section>
     </main>
+
+    <!-- Chart js  -->
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"
+    ></script>
+    <script type="text/javascript" src="./js/script.js"></script>
   </body>
 </html>

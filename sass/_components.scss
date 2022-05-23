@@ -189,6 +189,7 @@
 
       span {
         font-size: 2rem;
+        cursor: pointer;
       }
 
       input {
@@ -211,6 +212,10 @@
   display: flex;
   gap: 2rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+}
+
   &__chartside {
     flex-grow: 2;
     flex-shrink: 1;
@@ -227,6 +232,10 @@
   &__counter {
     display: flex;
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-direction: column;
+    }
 
     &--1 {
       flex: 1;
@@ -357,6 +366,17 @@
     h3 {
       font-size: 16px;
     }
+
+    h3 {
+      &:first-child {
+        color: var(--color-primary);
+      }
+    }
+    h3{ 
+        &:last-child{
+        color: var(--color-secondary);
+    }
+}
   }
 
   &__price {
@@ -402,14 +422,14 @@
   background-color: #fff;
   border: var(--border);
 
-  h3{
-      font-size: 1.6rem;
-      margin: 1.6rem 2rem;
+  h3 {
+    font-size: 1.6rem;
+    margin: 1.6rem 2rem;
   }
 
   &__profile {
     display: flex;
-    gap: 1.8rem;
+    gap: 1rem;
     align-items: center;
     justify-content: flex-start;
     margin-left: 2rem;
@@ -418,34 +438,184 @@
       width: 4rem;
       height: 4rem;
       border-radius: 50%;
+      cursor: pointer;
     }
 
-    span{
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        background-color: #000;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-self: center;
+    span {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
     }
   }
 
-  label{
+  label {
     margin-left: 2rem;
-    color: var(--color-secondary)
-}
+    color: var(--color-secondary);
+  }
 
-input{
+  input {
     // padding: 1.1rem;
     margin: 0 2rem;
     width: -webkit-fill-available;
     border: var(--border);
     outline: none;
+    padding-left: 1.4rem;
+  }
+  button {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.4rem;
+  }
 }
-button{
+
+// Dashboard chart
+
+.dashboard__chart {
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &-btns {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+
+      background-color: #fff;
+      border: var(--border);
+      outline: none;
+      color: var(--color-secondary-2);
+      padding: 0 0.5rem;
+      cursor: pointer;
+      transition: all 0.4s;
+
+      &:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+
+      &:focus {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.new-coin {
+  margin-bottom: 2.4rem;
+  background-color: #fff;
+  border: var(--border);
+  padding-bottom: 2.5rem;
+  border-radius: 0.7rem;
+
+  &__item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: 1.6rem 2rem 0 2rem;
+
+    &:first-child {
+      p {
+        color: var(--color-primary);
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+
+    &:hover &--left {
+      h3 {
+        color: var(--color-primary);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__item--left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+    p {
+      font-size: 1rem;
+      color: var(--color-secondary);
+    }
+  }
 }
+
+// TRENDING Market ////////
+.trending-market {
+  margin-top: 2.4rem;
+  padding: 2rem;
+  background-color: #fff;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    &:not(:last-child) {
+      padding-bottom: 2rem;
+      padding-top: 1rem;
+    }
+    p {
+      display: flex;
+      align-items: center;
+    }
+
+    &--img {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+
+  &__sub {
+    border-bottom: var(--border);
+    padding-bottom: 0 !important;
+    p {
+      font-size: 1rem;
+      color: var(--color-secondary);
+    }
+  }
+
+  &__heading {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
 }
+
+// .trand-and-transfer{
+//     @media only screen and (max-width: $bp-medium) {
+//        display: flex;
+//        gap: 2rem;
+
+//        .trand{
+//            flex: 1;
+//        }
+//     }
+// }

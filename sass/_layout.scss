@@ -7,6 +7,12 @@
     flex: 0 0 25.2rem;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    height: 90vh;
+
+    @media only screen and (max-width: $bp-medium-2) {
+        display: none;
+    }
 }
 
 .main-content{
@@ -18,13 +24,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
 }
 
 .dashboard{
     padding: 2.4rem;
-    background-color: var(--color-tertiary);
+    
 
-  
+  &__chart{
+      margin: 2.4rem 0;
+      background-color: #fff;
+      border: var(--border);
+      padding: 2rem;
+      border-radius:7px;
+  }
 }
 
 
